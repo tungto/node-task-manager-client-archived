@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
-import TaskForm from '../../components/TaskForm/TaskForm';
+import Header from '../components/Header/Header';
+import TaskForm from '../components/TaskForm/TaskForm';
 
 const AddTaskItemPage = (props) => {
   return (

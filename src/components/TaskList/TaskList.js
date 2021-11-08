@@ -1,28 +1,25 @@
-import React from 'react';
-import { useTaskContext } from '../../context/task_context';
-import TaskItem from '../TaskItem/TaskItem';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { TaskContext } from '../../context/TaskContext';
 import BuldAction from '../BuldAction/BuldAction';
-const TaskList = () => {
-  const { filtered_tasks, selectedItems } = useTaskContext();
+import TaskItem from '../TaskItem/TaskItem';
+const TaskList = ({ tasks }) => {
+	const { selectedItems } = useContext(TaskContext);
 
-  if (filtered_tasks.length < 1) {
-    return <h1>No task found</h1>;
-  }
-  return (
-    <TaskListContainer>
-      {filtered_tasks.map((task, index) => {
-        return <TaskItem key={index} {...task} />;
-      })}
+	return (
+		<TaskListContainer>
+			{tasks.map((task, index) => {
+				return <TaskItem key={index} {...task} />;
+			})}
 
-      {selectedItems > 0 && <BuldAction />}
-    </TaskListContainer>
-  );
+			{selectedItems > 0 && <BuldAction />}
+		</TaskListContainer>
+	);
 };
 
 const TaskListContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
 `;
 
 export default TaskList;

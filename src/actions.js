@@ -1,6 +1,6 @@
 export const LOAD_TASKS = 'LOAD_TASKS';
 export const ADD_TASK = 'ADD_TASK';
-export const REMOVE_TASK = 'REMOVE_TASK';
+export const DELETE_TASK = 'DELETE_TASK';
 export const UPDATE_TASK = 'UPDATE_TASK';
 export const EDIT_TASK = 'EDIT_TASK';
 export const SELECT_TASK = 'SELECT_TASK';
@@ -8,3 +8,7 @@ export const SORT_TASKS = 'SORT_TASKS';
 export const REMOVE_SELECTED_TASKS = 'REMOVE_SELECTED_TASKS';
 export const FILTER_TASKS = 'FILTER_TASKS';
 export const UPDATE_FILTERS = 'UPDATE_FILTERS';
+export const POSTS_LOADED_FAIL = 'POST_LOADED_FAIL';
+export const POSTS_LOADED_SUCCESS = 'POSTS_LOADED_SUCCESS';
+export const POST_LOADED_FAIL = 'POST_LOADED_FAIL';
+export const SEARCH_TASK = 'SEARCH_TASK';

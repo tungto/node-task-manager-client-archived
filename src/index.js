@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { TaskProvider } from './context/task_context';
+import TaskContextProvider from './context/TaskContext';
 import reportWebVitals from './reportWebVitals';
+import AuthContextProvider from './context/AuthContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <TaskProvider>
-      <App />
-    </TaskProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<AuthContextProvider>
+			<TaskContextProvider>
+				<App />
+			</TaskContextProvider>
+		</AuthContextProvider>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 reportWebVitals();
